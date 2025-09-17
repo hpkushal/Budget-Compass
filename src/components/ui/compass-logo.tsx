@@ -8,119 +8,80 @@ interface CompassLogoProps {
 export function CompassLogo({ size = 64, className = "" }: CompassLogoProps) {
   return (
     <div className={`relative flex items-center justify-center ${className}`} style={{ width: size, height: size }}>
-      {/* Compass Rose Background */}
       <svg
         width={size}
         height={size}
-        viewBox="0 0 64 64"
+        viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute"
       >
         {/* Outer compass ring - Teal */}
         <circle
-          cx="32"
-          cy="32"
-          r="30"
-          stroke="currentColor"
-          strokeWidth="2"
-          fill="none"
-          className="text-primary"
+          cx="50"
+          cy="50"
+          r="48"
+          stroke="#2D9A8C"
+          strokeWidth="3"
+          fill="white"
         />
         
-        {/* Inner compass ring - Light Blue */}
+        {/* Inner compass circle - Light background */}
         <circle
-          cx="32"
-          cy="32"
-          r="24"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          fill="none"
-          className="text-secondary"
-          opacity="0.7"
+          cx="50"
+          cy="50"
+          r="45"
+          fill="#F8FFFE"
         />
         
-        {/* Compass Points - N, E, S, W */}
-        <g className="text-primary font-semibold">
-          <text x="32" y="10" textAnchor="middle" className="text-sm font-bold fill-current">N</text>
-          <text x="54" y="36" textAnchor="middle" className="text-sm font-bold fill-current">E</text>
-          <text x="32" y="58" textAnchor="middle" className="text-sm font-bold fill-current">S</text>
-          <text x="10" y="36" textAnchor="middle" className="text-sm font-bold fill-current">W</text>
+        {/* Compass Points - N, W, E, S */}
+        <g className="font-bold" fill="#2D9A8C">
+          <text x="50" y="15" textAnchor="middle" fontSize="12" fontWeight="bold">N</text>
+          <text x="15" y="55" textAnchor="middle" fontSize="12" fontWeight="bold">W</text>
+          <text x="85" y="55" textAnchor="middle" fontSize="12" fontWeight="bold">E</text>
+          <text x="50" y="90" textAnchor="middle" fontSize="12" fontWeight="bold">S</text>
         </g>
         
-        {/* Compass needle pointing up/north - Teal and Orange */}
-        <g transform="translate(32, 32)">
-          {/* North pointing needle - Teal */}
+        {/* Compass needle pointing north - Teal */}
+        <g transform="translate(50, 50)">
           <path
-            d="M 0 -18 L 3 -6 L 0 -8 L -3 -6 Z"
-            fill="currentColor"
-            className="text-primary"
+            d="M 0 -25 L 4 -8 L 0 -10 L -4 -8 Z"
+            fill="#2D9A8C"
           />
-          {/* South pointing needle - Orange */}
+          <circle cx="0" cy="0" r="2" fill="#2D9A8C" />
+        </g>
+        
+        {/* Heart accent on top - Orange */}
+        <g transform="translate(50, 8)">
           <path
-            d="M 0 18 L 3 6 L 0 8 L -3 6 Z"
-            fill="currentColor"
-            className="text-accent"
+            d="M0 4c-2.5-2.5-6.5-2.5-9 0-2.5 2.5-2.5 6.5 0 9l9 9 9-9c2.5-2.5 2.5-6.5 0-9-2.5-2.5-6.5-2.5-9 0z"
+            fill="#F59E0B"
+            transform="scale(0.4)"
           />
         </g>
         
-        {/* Center dot */}
-        <circle
-          cx="32"
-          cy="32"
-          r="2"
-          fill="currentColor"
-          className="text-primary"
-        />
-      </svg>
-      
-      {/* House silhouette with family icon - Orange/Yellow */}
-      <svg
-        width={size * 0.4}
-        height={size * 0.3}
-        viewBox="0 0 24 18"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute bottom-0 text-accent"
-        style={{ bottom: size * 0.15 }}
-      >
-        {/* House shape */}
-        <path
-          d="M12 2 L4 8 L4 16 L20 16 L20 8 L12 2 Z"
-          fill="currentColor"
-          className="text-accent"
-        />
-        
-        {/* Family icon inside house */}
-        <g transform="translate(12, 12)" className="text-white">
-          {/* Parent 1 */}
-          <circle cx="-2" cy="-2" r="1" fill="currentColor" />
-          <rect x="-2.5" y="-1" width="1" height="2" fill="currentColor" />
+        {/* House with family at bottom - Orange */}
+        <g transform="translate(50, 75)">
+          {/* House shape */}
+          <path
+            d="M0 -8 L-8 0 L-8 8 L8 8 L8 0 Z"
+            fill="#F59E0B"
+          />
           
-          {/* Parent 2 */}
-          <circle cx="2" cy="-2" r="1" fill="currentColor" />
-          <rect x="1.5" y="-1" width="1" height="2" fill="currentColor" />
-          
-          {/* Child */}
-          <circle cx="0" cy="-1" r="0.7" fill="currentColor" />
-          <rect x="-0.3" y="-0.5" width="0.6" height="1.5" fill="currentColor" />
+          {/* Family silhouettes inside house */}
+          <g fill="white">
+            {/* Adult 1 */}
+            <circle cx="-3" cy="2" r="1.5" />
+            <rect x="-3.5" y="3" width="1" height="3" />
+            
+            {/* Adult 2 */}
+            <circle cx="3" cy="2" r="1.5" />
+            <rect x="2.5" y="3" width="1" height="3" />
+            
+            {/* Child */}
+            <circle cx="0" cy="3" r="1" />
+            <rect x="-0.5" y="4" width="1" height="2" />
+          </g>
         </g>
-      </svg>
-      
-      {/* Heart accent on top - Orange */}
-      <svg
-        width={size * 0.15}
-        height={size * 0.15}
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute top-0 text-accent"
-        style={{ top: size * 0.05 }}
-      >
-        <path
-          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-          fill="currentColor"
-        />
       </svg>
     </div>
   );

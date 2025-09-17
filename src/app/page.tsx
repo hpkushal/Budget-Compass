@@ -1,19 +1,20 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { BudgetCompassLogo } from "@/components/ui/compass-logo"
-import { Compass, DollarSign, TrendingUp, Bell, Target, PiggyBank, FileSpreadsheet, Users, Home as HomeIcon, ShoppingCart, Car, Gamepad2, Navigation, MapPin, Route } from "lucide-react"
+import { Navigation } from "@/components/ui/navigation"
+import { Compass, DollarSign, TrendingUp, Bell, Target, PiggyBank, FileSpreadsheet, Users, Home as HomeIcon, ShoppingCart, Car, Gamepad2, Navigation as NavigationIcon, MapPin, Route } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-50 via-blue-50 to-orange-50 dark:from-gray-900 dark:to-gray-800">
+      {/* Top Navigation */}
+      <Navigation />
+      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="flex justify-center mb-8">
-            <BudgetCompassLogo size="xl" />
-          </div>
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 mt-8">
             Navigate Your Family's Finances
             <span className="text-primary"> with Confidence</span>
           </h1>
@@ -28,14 +29,14 @@ export default function Home() {
           <p className="text-sm text-gray-500 mt-4">Ready in under 2 minutes</p>
         </div>
 
-        {/* Why This Matters Section */}
-        <div className="text-center mb-16">
+        {/* Features Section */}
+        <div id="features" className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">
             Your Trusted Financial Guide
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <Navigation className="w-16 h-16 mx-auto text-primary mb-4" />
+              <NavigationIcon className="w-16 h-16 mx-auto text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-3">Clear Direction</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Know exactly where your money goes each month. Get clear insights 
@@ -62,7 +63,7 @@ export default function Home() {
         </div>
 
         {/* Family Budget Categories Infographic */}
-        <div className="mb-16">
+        <div id="how-it-works" className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             Track What Matters to Your Family
           </h2>
@@ -177,7 +178,7 @@ export default function Home() {
         </div>
 
         {/* Call to Action Section */}
-        <div className="text-center bg-gradient-to-r from-primary via-secondary to-accent rounded-2xl p-12 text-white mb-16">
+        <div id="pricing" className="text-center bg-gradient-to-r from-primary via-secondary to-accent rounded-2xl p-12 text-white mb-16">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Navigate Your Financial Future?
           </h2>
@@ -261,6 +262,29 @@ export default function Home() {
             </CardContent>
           </Card>
         </div>
+
+        {/* About Section */}
+        <div id="about" className="text-center mb-16 mt-16">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            About Budget Compass
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              We believe that managing your family's finances shouldn't be overwhelming or complicated. 
+              Budget Compass was created to be your trusted guide on the journey to financial confidence.
+            </p>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              Our mission is simple: help families navigate their financial future with clarity, 
+              confidence, and care. Every feature is designed with real families in mind, 
+              because we know that every dollar counts when you're building your future together.
+            </p>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <footer className="text-center text-gray-600 dark:text-gray-300 mt-16 py-8">
+          <p>&copy; 2024 Budget Compass. Navigate your family's finances with confidence.</p>
+        </footer>
       </div>
     </div>
   );
