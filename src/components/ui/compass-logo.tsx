@@ -42,10 +42,10 @@ export function CompassLogo({ size = 64, className = "" }: CompassLogoProps) {
         
         {/* Compass Points - N, E, S, W */}
         <g className="text-primary font-semibold">
-          <text x="32" y="8" textAnchor="middle" className="text-xs font-bold fill-current">N</text>
-          <text x="56" y="36" textAnchor="middle" className="text-xs font-bold fill-current">E</text>
-          <text x="32" y="60" textAnchor="middle" className="text-xs font-bold fill-current">S</text>
-          <text x="8" y="36" textAnchor="middle" className="text-xs font-bold fill-current">W</text>
+          <text x="32" y="10" textAnchor="middle" className="text-sm font-bold fill-current">N</text>
+          <text x="54" y="36" textAnchor="middle" className="text-sm font-bold fill-current">E</text>
+          <text x="32" y="58" textAnchor="middle" className="text-sm font-bold fill-current">S</text>
+          <text x="10" y="36" textAnchor="middle" className="text-sm font-bold fill-current">W</text>
         </g>
         
         {/* Compass needle pointing up/north - Teal and Orange */}

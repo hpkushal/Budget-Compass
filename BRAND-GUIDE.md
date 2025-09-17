@@ -6,14 +6,14 @@
 **Tagline:** Navigate Your Family's Finances
 
 ## Logo Concept
-The logo combines a stylized compass rose with a house silhouette, symbolizing direction ("compass") and the family ("house"). The needle points upwards, representing progress in managing finances. A small family icon is subtly integrated into the house element, with a heart accent on top.
+The logo combines a stylized compass rose with a house silhouette, symbolizing direction ("compass") and the family ("house"). The needle points upwards, representing progress in managing finances. A small family icon is subtly integrated into the house element, with a heart accent on top representing love and care for family finances.
 
 ## Color Palette
 
 ### Primary Colors
-- **Teal (Primary):** `oklch(0.55 0.15 180)` - Calm, trust, and stability
-- **Light Blue (Secondary):** `oklch(0.85 0.08 220)` - Clarity and logic  
-- **Muted Orange/Yellow (Accent):** `oklch(0.75 0.12 60)` - Warm and friendly, signifies home and family
+- **Teal (Compass):** `oklch(0.55 0.15 180)` - A color that evokes a sense of calm, trust, and stability
+- **Light Blue (Compass):** `oklch(0.85 0.08 220)` - Represents clarity and logic  
+- **Muted Orange/Yellow (House & Accents):** `oklch(0.75 0.12 60)` - A warm and friendly color that signifies the home and family
 
 ### Dark Mode Colors
 - **Teal (Primary):** `oklch(0.65 0.15 180)` - Brighter teal for dark mode
@@ -29,9 +29,12 @@ The logo combines a stylized compass rose with a house silhouette, symbolizing d
 
 ## Typography
 
-**Primary Font:** Geist Sans - A clean, modern sans-serif font used for all branding, including the logo, website, and app. Easy to read and conveys professionalism and simplicity.
+**Primary Font:** A clean, modern sans-serif font should be used for all branding, including the logo, website, and app. This font is easy to read and conveys a sense of professionalism and simplicity. The project uses Geist Sans as the implementation.
+
+**Tagline Font:** A lighter, smaller version of the primary font is used for the tagline, ensuring it complements the main brand name.
 
 **Logo Typography:** 
+- "BUDGET" is slightly bolder than "COMPASS" to emphasize the primary function of the tool
 - "BUDGET" is styled with `font-extrabold`
 - "COMPASS" is styled with `font-normal`
 - Tagline uses smaller text with uppercase tracking
@@ -39,18 +42,10 @@ The logo combines a stylized compass rose with a house silhouette, symbolizing d
 ## Brand Voice and Tone
 
 ### Voice
-Budget Compass should sound like a trusted, friendly, and knowledgeable guide. The language should be:
-- Clear and simple
-- Free of financial jargon
-- Encouraging and supportive
-- Professional yet approachable
+Budget Compass should sound like a trusted, friendly, and knowledgeable guide. The language should be clear, simple, and free of financial jargon.
 
 ### Tone
-- **Encouraging and supportive**, not judgmental
-- Makes users feel **empowered and in control**
-- **Approachable and human**
-- Recognizes the unique challenges and goals of families
-- **Confident guidance** without overwhelming complexity
+The tone should be encouraging and supportive, not judgmental. It should make the user feel empowered and in control of their finances. The brand should be approachable and human, recognizing the unique challenges and goals of families.
 
 ## Key Messaging
 
