@@ -1,28 +1,29 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Heart, DollarSign, TrendingUp, Bell, Target, PiggyBank, FileSpreadsheet, Users, Home as HomeIcon, ShoppingCart, Car, Gamepad2 } from "lucide-react"
+import { BudgetCompassLogo } from "@/components/ui/compass-logo"
+import { Compass, DollarSign, TrendingUp, Bell, Target, PiggyBank, FileSpreadsheet, Users, Home as HomeIcon, ShoppingCart, Car, Gamepad2, Navigation, MapPin, Route } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-blue-50 to-orange-50 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="flex justify-center mb-6">
-            <Heart className="w-16 h-16 text-pink-500 animate-pulse" />
+          <div className="flex justify-center mb-8">
+            <BudgetCompassLogo size="xl" />
           </div>
           <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Take Control of Our Family Budget,
-            <span className="text-pink-600"> Together</span>
+            Navigate Your Family's Finances
+            <span className="text-primary"> with Confidence</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            A simple, powerful tool designed specifically for our family to track expenses, 
-            set realistic budgets, and achieve our financial goals. Because every dollar counts 
-            when we&apos;re building our future together.
+            A trusted, friendly guide for your family's financial journey. Track expenses, 
+            set realistic budgets, and achieve your financial goals together. Every dollar counts 
+            when you're building your future.
           </p>
-          <Button asChild size="lg" className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 text-lg">
-            <Link href="/auth/signup">Get Started - It&apos;s Free! 💕</Link>
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg">
+            <Link href="/auth/signup">Start Your Journey - It&apos;s Free!</Link>
           </Button>
           <p className="text-sm text-gray-500 mt-4">Ready in under 2 minutes</p>
         </div>
@@ -30,31 +31,31 @@ export default function Home() {
         {/* Why This Matters Section */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">
-            Built for Real Family Life
+            Your Trusted Financial Guide
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <Target className="w-16 h-16 mx-auto text-green-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Every Dollar Counts</h3>
+              <Navigation className="w-16 h-16 mx-auto text-primary mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Clear Direction</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Know exactly where our money goes each month. No more wondering 
-                &quot;where did it all go?&quot;
+                Know exactly where your money goes each month. Get clear insights 
+                without the confusion or financial jargon.
               </p>
             </div>
             <div className="text-center">
-              <PiggyBank className="w-16 h-16 mx-auto text-pink-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Plan for What Matters</h3>
+              <MapPin className="w-16 h-16 mx-auto text-accent mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Reach Your Goals</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Save for family vacations, kids&apos; activities, and those 
-                unexpected expenses that always pop up.
+                Set meaningful financial destinations - family vacations, emergency funds, 
+                or that special purchase you've been planning.
               </p>
             </div>
             <div className="text-center">
-              <Users className="w-16 h-16 mx-auto text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Simple & Together</h3>
+              <Route className="w-16 h-16 mx-auto text-secondary mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Simple Journey</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Managing our family budget shouldn&apos;t be complicated. 
-                Work together towards our financial goals.
+                Navigate your finances with confidence. Our friendly, supportive approach 
+                makes budgeting feel empowering, not overwhelming.
               </p>
             </div>
           </div>
@@ -63,26 +64,26 @@ export default function Home() {
         {/* Family Budget Categories Infographic */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Track What Matters to Our Family
+            Track What Matters to Your Family
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm text-center">
-              <HomeIcon className="w-10 h-10 mx-auto text-blue-600 mb-3" />
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm text-center border border-primary/20">
+              <HomeIcon className="w-10 h-10 mx-auto text-primary mb-3" />
               <h4 className="font-semibold">Home & Bills</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">Rent, utilities, insurance</p>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm text-center">
-              <ShoppingCart className="w-10 h-10 mx-auto text-green-600 mb-3" />
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm text-center border border-secondary/20">
+              <ShoppingCart className="w-10 h-10 mx-auto text-secondary mb-3" />
               <h4 className="font-semibold">Groceries</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">Food, household items</p>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm text-center">
-              <Car className="w-10 h-10 mx-auto text-orange-600 mb-3" />
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm text-center border border-accent/20">
+              <Car className="w-10 h-10 mx-auto text-accent mb-3" />
               <h4 className="font-semibold">Transportation</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">Gas, car payments, transit</p>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm text-center">
-              <Gamepad2 className="w-10 h-10 mx-auto text-purple-600 mb-3" />
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm text-center border border-primary/20">
+              <Gamepad2 className="w-10 h-10 mx-auto text-primary mb-3" />
               <h4 className="font-semibold">Family Fun</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">Date nights, kids activities</p>
             </div>
@@ -92,83 +93,83 @@ export default function Home() {
         {/* Features Grid */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            Everything You Need in One Place
+            Your Complete Financial Navigation Kit
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="text-center">
+            <Card className="text-center border-primary/20">
               <CardHeader>
-                <DollarSign className="w-12 h-12 mx-auto text-green-600 mb-4" />
-                <CardTitle>Quick Expense Logging</CardTitle>
+                <DollarSign className="w-12 h-12 mx-auto text-primary mb-4" />
+                <CardTitle>Quick Expense Tracking</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Add expenses in seconds, even while grocery shopping. 
-                  Snap a photo of receipts for later.
+                  Log expenses effortlessly, even on-the-go. 
+                  Simple, clear tracking without the complexity.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center border-secondary/20">
               <CardHeader>
-                <TrendingUp className="w-12 h-12 mx-auto text-blue-600 mb-4" />
-                <CardTitle>Smart Budget Tracking</CardTitle>
+                <TrendingUp className="w-12 h-12 mx-auto text-secondary mb-4" />
+                <CardTitle>Smart Budget Guidance</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Set realistic budgets for groceries, utilities, and family fun. 
-                  See progress in real-time.
+                  Set realistic budgets that work for your family. 
+                  Get clear insights on your progress, not judgment.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center border-accent/20">
               <CardHeader>
-                <FileSpreadsheet className="w-12 h-12 mx-auto text-purple-600 mb-4" />
-                <CardTitle>Monthly Reports</CardTitle>
+                <FileSpreadsheet className="w-12 h-12 mx-auto text-accent mb-4" />
+                <CardTitle>Clear Monthly Reports</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Beautiful Excel reports showing exactly where our money went. 
-                  Perfect for planning next month.
+                  Beautiful, easy-to-understand reports showing your financial journey. 
+                  Perfect for planning ahead.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center border-accent/20">
               <CardHeader>
-                <Bell className="w-12 h-12 mx-auto text-orange-600 mb-4" />
-                <CardTitle>Helpful Reminders</CardTitle>
+                <Bell className="w-12 h-12 mx-auto text-accent mb-4" />
+                <CardTitle>Gentle Guidance</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Get gentle notifications when we&apos;re close to budget limits. 
-                  Stay on track without stress.
+                  Supportive notifications to keep you on track. 
+                  Encouraging reminders, never stressful alerts.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center border-primary/20">
               <CardHeader>
-                <Target className="w-12 h-12 mx-auto text-pink-600 mb-4" />
-                <CardTitle>Goal Setting</CardTitle>
+                <Target className="w-12 h-12 mx-auto text-primary mb-4" />
+                <CardTitle>Meaningful Goals</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Set savings goals for vacations, emergencies, or that special purchase. 
-                  Watch progress grow.
+                  Set financial destinations that matter to your family. 
+                  Watch your progress with confidence and clarity.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center border-secondary/20">
               <CardHeader>
-                <Heart className="w-12 h-12 mx-auto text-red-600 mb-4" />
-                <CardTitle>Made with Love</CardTitle>
+                <Compass className="w-12 h-12 mx-auto text-secondary mb-4" />
+                <CardTitle>Trusted Guide</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Built specifically for our family&apos;s needs. 
-                  No complicated features - just what we actually use.
+                  Your reliable financial companion. 
+                  Simple, friendly guidance that makes budgeting feel empowering.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -176,16 +177,16 @@ export default function Home() {
         </div>
 
         {/* Call to Action Section */}
-        <div className="text-center bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-12 text-white mb-16">
+        <div className="text-center bg-gradient-to-r from-primary via-secondary to-accent rounded-2xl p-12 text-white mb-16">
           <h2 className="text-3xl font-bold mb-4">
-            Ready to Transform Our Family&apos;s Financial Future?
+            Ready to Navigate Your Financial Future?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join thousands of families who&apos;ve taken control of their budgets. 
-            Start your journey to financial peace of mind today.
+            Join thousands of families who've found their financial direction. 
+            Start your journey to financial confidence today.
           </p>
-          <Button asChild size="lg" className="bg-white text-pink-600 hover:bg-gray-100 px-8 py-4 text-lg">
-            <Link href="/auth/signup">Start Our Budget Journey 💕</Link>
+          <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg">
+            <Link href="/auth/signup">Begin Your Journey</Link>
           </Button>
           <div className="mt-6 flex justify-center gap-8 text-sm opacity-80">
             <span>✨ Free to use</span>
@@ -194,67 +195,67 @@ export default function Home() {
           </div>
         </div>
 
-        {/* What Our Family Gets */}
+        {/* What Your Family Gets */}
         <div className="text-center">
-          <Card className="max-w-3xl mx-auto bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 border-green-200">
+          <Card className="max-w-3xl mx-auto bg-gradient-to-br from-teal-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 border-primary/20">
             <CardHeader>
-              <CardTitle className="text-green-700 dark:text-green-400 text-2xl">
-                🎉 Everything We Need is Ready!
+              <CardTitle className="text-primary dark:text-primary text-2xl">
+                🧭 Your Complete Financial Navigation System
               </CardTitle>
               <CardDescription className="text-lg">
-                Our family budget tool is complete and waiting for us
+                Everything you need to navigate your family's finances with confidence
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-4 text-left">
                 <div className="space-y-3">
                   <p className="flex items-center gap-2">
-                    <span className="text-green-600">✅</span>
-                    <span>Quick expense tracking on-the-go</span>
+                    <span className="text-primary">✅</span>
+                    <span>Effortless expense tracking</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <span className="text-green-600">✅</span>
-                    <span>Smart budget alerts to stay on track</span>
+                    <span className="text-primary">✅</span>
+                    <span>Gentle budget guidance</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <span className="text-green-600">✅</span>
-                    <span>Beautiful monthly Excel reports</span>
+                    <span className="text-primary">✅</span>
+                    <span>Clear monthly insights</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <span className="text-green-600">✅</span>
-                    <span>Custom categories for our lifestyle</span>
+                    <span className="text-primary">✅</span>
+                    <span>Custom categories for your lifestyle</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <span className="text-green-600">✅</span>
-                    <span>Multi-currency support (CAD default)</span>
+                    <span className="text-primary">✅</span>
+                    <span>Multi-currency support</span>
                   </p>
                 </div>
                 <div className="space-y-3">
                   <p className="flex items-center gap-2">
-                    <span className="text-green-600">✅</span>
-                    <span>Secure login with email confirmation</span>
+                    <span className="text-primary">✅</span>
+                    <span>Secure & private</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <span className="text-green-600">✅</span>
-                    <span>Real-time spending analytics</span>
+                    <span className="text-primary">✅</span>
+                    <span>Real-time progress tracking</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <span className="text-green-600">✅</span>
-                    <span>Halifax timezone (perfect for us!)</span>
+                    <span className="text-primary">✅</span>
+                    <span>Timezone-aware reporting</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <span className="text-green-600">✅</span>
+                    <span className="text-primary">✅</span>
                     <span>Mobile-friendly design</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <span className="text-orange-500">⏳</span>
-                    <span>Email reminders (coming soon)</span>
+                    <span className="text-accent">⏳</span>
+                    <span>Smart reminders (coming soon)</span>
                   </p>
                 </div>
               </div>
-              <div className="mt-8 pt-6 border-t border-green-200">
-                <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
-                  <Link href="/auth/signup">Let&apos;s Get Started Together! 🚀</Link>
+              <div className="mt-8 pt-6 border-t border-primary/20">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Link href="/auth/signup">Start Your Financial Journey</Link>
                 </Button>
               </div>
             </CardContent>

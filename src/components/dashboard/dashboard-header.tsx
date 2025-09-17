@@ -1,6 +1,7 @@
 import { User } from '@supabase/supabase-js'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
+import { BudgetCompassLogo } from '@/components/ui/compass-logo'
 import { 
   DropdownMenu,
   DropdownMenuContent,
@@ -27,13 +28,16 @@ export function DashboardHeader({ user }: DashboardHeaderProps) {
 
   return (
     <div className="flex items-center justify-between">
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          Dashboard
-        </h1>
-        <p className="text-gray-600 dark:text-gray-300">
-          Welcome back, {user.email?.split('@')[0]}!
-        </p>
+      <div className="flex items-center gap-4">
+        <BudgetCompassLogo size="sm" showText={false} />
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+            Dashboard
+          </h1>
+          <p className="text-gray-600 dark:text-gray-300">
+            Welcome back, {user.email?.split('@')[0]}!
+          </p>
+        </div>
       </div>
 
       <div className="flex items-center gap-4">

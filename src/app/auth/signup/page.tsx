@@ -15,6 +15,7 @@ import { createClientComponentClient } from '@/lib/supabase'
 import { signUpSchema, type SignUpFormData } from '@/lib/validations'
 import { ensureUserSetup } from '@/lib/user-setup'
 import { Eye, EyeOff, Loader2 } from 'lucide-react'
+import { BudgetCompassLogo } from '@/components/ui/compass-logo'
 
 export default function SignUpPage() {
   const [isLoading, setIsLoading] = useState(false)
@@ -62,7 +63,7 @@ export default function SignUpPage() {
       if (authData.session) {
         // User is immediately logged in (email confirmation disabled)
         toast.success('Account created successfully!', {
-          description: 'Welcome to Monthly Money Manager.',
+          description: 'Welcome to Budget Compass - your financial guide.',
         })
         router.push('/dashboard')
       } else {
@@ -82,12 +83,15 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-blue-50 to-orange-50 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
+          <div className="flex justify-center mb-4">
+            <BudgetCompassLogo size="md" />
+          </div>
           <CardTitle className="text-2xl font-bold">Create Account</CardTitle>
           <CardDescription>
-            Get started with Monthly Money Manager
+            Start navigating your family's finances with Budget Compass
           </CardDescription>
         </CardHeader>
         <CardContent>

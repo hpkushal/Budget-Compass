@@ -1,6 +1,6 @@
-# 💰 Budget Compass - Monthly Money Manager
+# 🧭 Budget Compass - Navigate Your Family's Finances
 
-A comprehensive, production-ready web application for personal finance management built with modern technologies. Track expenses, manage budgets, and gain insights into your spending patterns with a beautiful, responsive interface.
+A trusted, friendly guide for your family's financial journey. Built with modern technologies to help you track expenses, set realistic budgets, and achieve your financial goals with confidence. Simple, clear guidance without the financial jargon.
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.5.3-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)

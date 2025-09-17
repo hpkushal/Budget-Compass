@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Monthly Money Manager",
-  description: "Track expenses, set budgets, and manage your finances with ease",
+  title: "Budget Compass",
+  description: "Navigate Your Family's Finances - Track expenses, set budgets, and achieve your financial goals with ease",
 };
 
 export default function RootLayout({

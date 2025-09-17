@@ -51,31 +51,35 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* Budget Compass Brand Colors - Teal Primary */
+  --primary: oklch(0.55 0.15 180); /* Calm teal */
+  --primary-foreground: oklch(0.98 0 0);
+  /* Light blue secondary */
+  --secondary: oklch(0.85 0.08 220); /* Light blue */
+  --secondary-foreground: oklch(0.2 0 0);
+  --muted: oklch(0.96 0.02 180);
+  --muted-foreground: oklch(0.5 0.05 180);
+  /* Warm orange/yellow accents */
+  --accent: oklch(0.75 0.12 60); /* Muted orange/yellow */
+  --accent-foreground: oklch(0.2 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
+  --border: oklch(0.92 0.02 180);
+  --input: oklch(0.95 0.02 180);
+  --ring: oklch(0.55 0.15 180); /* Match primary teal */
+  /* Budget Compass Chart Colors */
+  --chart-1: oklch(0.55 0.15 180); /* Teal */
+  --chart-2: oklch(0.65 0.12 220); /* Light blue */
+  --chart-3: oklch(0.75 0.12 60); /* Muted orange */
+  --chart-4: oklch(0.45 0.18 180); /* Darker teal */
+  --chart-5: oklch(0.8 0.08 45); /* Light orange */
+  --sidebar: oklch(0.98 0.01 180);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-primary: oklch(0.55 0.15 180); /* Teal */
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.95 0.02 180);
+  --sidebar-accent-foreground: oklch(0.2 0 0);
+  --sidebar-border: oklch(0.92 0.02 180);
+  --sidebar-ring: oklch(0.55 0.15 180);
 }
 
 .dark {
@@ -85,31 +89,35 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
+  /* Budget Compass Dark Mode - Teal Primary */
+  --primary: oklch(0.65 0.15 180); /* Brighter teal for dark mode */
+  --primary-foreground: oklch(0.1 0 0);
+  /* Light blue secondary for dark mode */
+  --secondary: oklch(0.3 0.08 220); /* Darker blue */
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.25 0.02 180);
+  --muted-foreground: oklch(0.7 0.05 180);
+  /* Warm orange/yellow accents for dark mode */
+  --accent: oklch(0.7 0.12 50); /* Warmer orange for dark mode */
+  --accent-foreground: oklch(0.1 0 0);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
+  --border: oklch(0.3 0.02 180 / 50%);
+  --input: oklch(0.25 0.02 180 / 80%);
+  --ring: oklch(0.65 0.15 180); /* Match primary teal */
+  /* Budget Compass Dark Chart Colors */
+  --chart-1: oklch(0.65 0.15 180); /* Brighter teal */
+  --chart-2: oklch(0.7 0.12 220); /* Lighter blue */
+  --chart-3: oklch(0.75 0.12 50); /* Orange */
+  --chart-4: oklch(0.5 0.18 180); /* Darker teal */
+  --chart-5: oklch(0.8 0.1 40); /* Light orange */
+  --sidebar: oklch(0.18 0.01 180);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-primary: oklch(0.65 0.15 180); /* Teal */
+  --sidebar-primary-foreground: oklch(0.1 0 0);
+  --sidebar-accent: oklch(0.25 0.02 180);
   --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar-border: oklch(0.3 0.02 180 / 50%);
+  --sidebar-ring: oklch(0.65 0.15 180);
 }
 
 @layer base {
