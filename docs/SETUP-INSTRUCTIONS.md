@@ -168,9 +168,10 @@ Your Budget Compass is **production-ready** with:
 
 ## 📚 Additional Resources
 
-- **API Documentation**: See `API.md` for database schema and API patterns
-- **Deployment Guide**: See `DEPLOYMENT.md` for production deployment
-- **Settings Update**: See `SETTINGS-UPDATE.md` for database updates
+- **[API Documentation](API.md)** - Database schema and API patterns
+- **[Deployment Guide](DEPLOYMENT.md)** - Production deployment guide
+- **[Settings Update](SETTINGS-UPDATE.md)** - Database updates and configuration
+- **[Main README](../README.md)** - Complete project overview
 
 ---
 

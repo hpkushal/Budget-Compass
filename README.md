@@ -59,29 +59,26 @@ SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 
 ### 3. Database Setup
 
-Run the database setup scripts in your Supabase SQL Editor:
-
+**Option A: Automated Setup (Recommended)**
 ```bash
-# Core schema and tables
-supabase/schema.sql
-
-# Row Level Security policies
-supabase/rls_policies.sql
-
-# Database triggers and functions
-supabase/triggers_functions.sql
-
-# Views for optimized queries
-supabase/views.sql
-
-# Sample data (optional)
-supabase/seed_data.sql
+# Make the setup script executable and run it
+chmod +x scripts/setup-database.sh
+./scripts/setup-database.sh
 ```
 
-Or use the quick fix script:
+**Option B: Manual Setup**
+Run the database setup scripts in your Supabase SQL Editor in this order:
+
+1. **Core Schema**: `supabase/schema.sql`
+2. **Row Level Security**: `supabase/rls_policies.sql`  
+3. **Functions & Triggers**: `supabase/triggers_functions.sql`
+4. **Optimized Views**: `supabase/views.sql`
+5. **Sample Data** (optional): `supabase/seed_data.sql`
+
+**Option C: Quick Fix for Issues**
 ```bash
 # If you encounter signup issues
-fix-auth-trigger.sql
+scripts/fix-auth-trigger.sql
 ```
 
 ### 4. Install Dependencies
@@ -105,48 +102,67 @@ Visit [http://localhost:3000](http://localhost:3000) to see your application.
 ## 📁 Project Structure
 
 ```
-src/
-├── app/                    # Next.js 15 App Router
-│   ├── layout.tsx         # Root layout with providers
-│   ├── page.tsx           # Landing page
-│   ├── globals.css        # Global styles & CSS variables
-│   ├── auth/              # Authentication pages
-│   │   ├── login/         # Login page
-│   │   ├── signup/        # Signup page
-│   │   └── callback/      # Auth callback handler
-│   ├── dashboard/         # Main dashboard
-│   ├── expenses/          # Expense management
-│   │   └── new/           # Add expense form
-│   ├── budgets/           # Budget management
-│   ├── reports/           # Financial reports
-│   ├── analytics/         # Analytics dashboard
-│   └── settings/          # User settings
-├── components/
-│   ├── auth/              # Authentication components
-│   ├── dashboard/         # Dashboard components
-│   ├── expenses/          # Expense-related components
-│   ├── budgets/           # Budget components
-│   ├── reports/           # Report components
-│   ├── settings/          # Settings components
-│   ├── providers/         # React context providers
-│   └── ui/                # shadcn/ui components
-├── lib/
-│   ├── supabase/          # Supabase client configurations
-│   ├── currency.ts        # Currency utilities
-│   ├── date-utils.ts      # Date/timezone utilities
-│   ├── excel-export.ts    # Excel export functionality
-│   ├── user-setup.ts      # User onboarding utilities
-│   ├── validations.ts     # Zod schemas
-│   └── utils.ts           # General utilities
-└── types/
-    └── database.ts        # TypeScript database types
-
-supabase/                   # Database setup scripts
-├── schema.sql             # Core database schema
-├── rls_policies.sql       # Row Level Security policies
-├── triggers_functions.sql # Database triggers & functions
-├── views.sql              # Optimized database views
-└── seed_data.sql          # Sample data for development
+Budget-Compass/
+├── src/                    # Next.js 15 Application
+│   ├── app/               # Next.js App Router
+│   │   ├── layout.tsx     # Root layout with providers
+│   │   ├── page.tsx       # Landing page
+│   │   ├── globals.css    # Global styles & CSS variables
+│   │   ├── auth/          # Authentication pages
+│   │   │   ├── login/     # Login page
+│   │   │   ├── signup/    # Signup page
+│   │   │   └── callback/  # Auth callback handler
+│   │   ├── dashboard/     # Main dashboard
+│   │   ├── expenses/      # Expense management
+│   │   │   └── new/       # Add expense form
+│   │   ├── budgets/       # Budget management
+│   │   ├── reports/       # Financial reports
+│   │   ├── analytics/     # Analytics dashboard
+│   │   └── settings/      # User settings
+│   ├── components/
+│   │   ├── auth/          # Authentication components
+│   │   ├── dashboard/     # Dashboard components
+│   │   ├── expenses/      # Expense-related components
+│   │   ├── budgets/       # Budget components
+│   │   ├── reports/       # Report components
+│   │   ├── settings/      # Settings components
+│   │   ├── providers/     # React context providers
+│   │   └── ui/            # shadcn/ui components
+│   ├── lib/
+│   │   ├── supabase/      # Supabase client configurations
+│   │   ├── currency.ts    # Currency utilities
+│   │   ├── date-utils.ts  # Date/timezone utilities
+│   │   ├── excel-export.ts # Excel export functionality
+│   │   ├── user-setup.ts  # User onboarding utilities
+│   │   ├── validations.ts # Zod schemas
+│   │   └── utils.ts       # General utilities
+│   └── types/
+│       └── database.ts    # TypeScript database types
+├── supabase/              # Database Setup Scripts
+│   ├── README.md          # Database setup documentation
+│   ├── schema.sql         # Core database schema
+│   ├── rls_policies.sql   # Row Level Security policies
+│   ├── triggers_functions.sql # Database triggers & functions
+│   ├── views.sql          # Optimized database views
+│   └── seed_data.sql      # Sample data for development
+├── public/                # Static Assets
+├── docs/                  # Documentation
+│   ├── API.md             # API documentation
+│   ├── DEPLOYMENT.md      # Deployment guide
+│   ├── SETUP-INSTRUCTIONS.md # Quick setup guide
+│   ├── SETTINGS-UPDATE.md # Database update guide
+│   └── CHANGELOG.md       # Version history
+├── scripts/               # Utility Scripts
+│   ├── setup-database.sh  # Automated database setup
+│   ├── test-app.js        # Application testing
+│   ├── verify-setup.js    # Setup verification
+│   ├── fix-auth-trigger.sql # Auth trigger fixes
+│   └── update-user-settings.sql # Settings updates
+├── package.json           # Node.js dependencies
+├── next.config.ts         # Next.js configuration
+├── tailwind.config.ts     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+└── .env.example           # Environment variables template
 ```
 
 ## 🗄️ Database Schema
@@ -331,6 +347,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you found this project helpful, please give it a ⭐️!
 
 For support, email your-email@domain.com or join our Discord community.
+
+---
+
+## 📚 Documentation
+
+Comprehensive documentation is available in the `docs/` directory:
+
+- **[Setup Instructions](docs/SETUP-INSTRUCTIONS.md)** - Quick start guide
+- **[API Documentation](docs/API.md)** - Database schema and API patterns  
+- **[Deployment Guide](docs/DEPLOYMENT.md)** - Production deployment
+- **[Settings Update](docs/SETTINGS-UPDATE.md)** - Database updates
+- **[Changelog](docs/CHANGELOG.md)** - Version history and features
+
+## 🛠️ Utility Scripts
+
+The `scripts/` directory contains helpful utilities:
+
+- **`setup-database.sh`** - Automated database setup
+- **`test-app.js`** - Application testing and verification
+- **`verify-setup.js`** - Setup verification and troubleshooting
+- **`fix-auth-trigger.sql`** - Authentication fixes
+- **`update-user-settings.sql`** - Settings table updates
 
 ---
 
