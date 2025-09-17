@@ -372,4 +372,4 @@ The `scripts/` directory contains helpful utilities:
 
 ---
 
-**Built with ❤️ using Next.js 15, Supabase, and modern web technologies.**
+**Built with ❤️ using Next.js 15, Supabase, and modern web technologies.**# Deployment with environment variables
