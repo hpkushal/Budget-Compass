@@ -15,7 +15,7 @@ export const expenseSchema = z.object({
 export const expenseFormSchema = z.object({
   category_id: z.string().min(1, 'Please select a category'),
   amount: z.string().min(1, 'Amount is required'),
-  currency: currencySchema.default('CAD'),
+  currency: currencySchema,
   description: z.string().max(255, 'Description too long').optional(),
   expense_date: z.string().min(1, 'Date is required'),
 })
@@ -32,7 +32,7 @@ export const budgetSchema = z.object({
 export const budgetFormSchema = z.object({
   category_id: z.string().min(1, 'Please select a category'),
   amount: z.string().min(1, 'Amount is required'),
-  currency: currencySchema.default('CAD'),
+  currency: currencySchema,
   month: z.number().int().min(1).max(12),
   year: z.number().int().min(2020).max(2100),
 })
