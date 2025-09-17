@@ -25,7 +25,7 @@ export default function TestAuthPage() {
       const { data, error } = await supabase.from('user_settings').select('count').limit(1)
       addResult('Database Connection', { data, error }, !error)
     } catch (error) {
-      addResult('Database Connection', { error: error.message }, false)
+      addResult('Database Connection', { error: error instanceof Error ? error.message : 'Unknown error' }, false)
     }
     setIsLoading(false)
   }
@@ -45,7 +45,7 @@ export default function TestAuthPage() {
         error 
       }, !error)
     } catch (error) {
-      addResult('Signup Test', { error: error.message }, false)
+      addResult('Signup Test', { error: error instanceof Error ? error.message : 'Unknown error' }, false)
     }
     setIsLoading(false)
   }
@@ -69,7 +69,7 @@ export default function TestAuthPage() {
         toast.error(error.message)
       }
     } catch (error) {
-      addResult('Login Test', { error: error.message }, false)
+      addResult('Login Test', { error: error instanceof Error ? error.message : 'Unknown error' }, false)
     }
     setIsLoading(false)
   }
@@ -83,7 +83,7 @@ export default function TestAuthPage() {
         error 
       }, !error)
     } catch (error) {
-      addResult('Current User', { error: error.message }, false)
+      addResult('Current User', { error: error instanceof Error ? error.message : 'Unknown error' }, false)
     }
     setIsLoading(false)
   }

@@ -2,12 +2,16 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   typescript: {
-    // Temporarily ignore TypeScript errors during build for deployment
+    // Temporarily ignore TypeScript errors for deployment
+    // TODO: Fix database types in future update
     ignoreBuildErrors: true,
   },
   eslint: {
-    // Temporarily ignore ESLint errors during build for deployment
-    ignoreDuringBuilds: true,
+    // Allow warnings but block on errors
+    ignoreDuringBuilds: false,
+  },
+  turbopack: {
+    root: '/Users/kparameshwara/Budget/Budget-Compass',
   },
 };
 
